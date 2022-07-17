@@ -1,0 +1,26 @@
+<template name="profile">
+    <div class="row">
+      {{#each profiles}}
+        <div class="col-md-4" id="{{_id}}">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative {{#if whatSex}}male{{else}}female{{/if}}">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary">Social Book</strong>
+              
+              <h3 class="mb-3">{{fname}}</h3>
+              <h4 class="mb-3">{{lname}}</h4>
+              <h5 class="mb-3">{{sex}}</h5>
+              <h6 class="mb-3">{{num}}</h6>
+              <h7 class="mb-3">{{info}}</h7>
+              <h8 class="mb-3">{{idea}}</h8>
+              <h9 class="mb-3">{{parish}}</h9>
+              <a href="#" class=" js-view">Edit Your Profile</a>
+            </div>
+            <div class="col-auto d-none d-lg-block profHeight">
+              <img class="w-100" src="{{picPath}}" alt="">
+            </div>
+          </div>
+        </div>
+        {{/each}}
+    </div>
+  </template>
+    
