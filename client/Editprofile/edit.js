@@ -24,9 +24,9 @@ Template.editProf.events({
                 "parish":parish,
                 "sex":Sex,
                 "createdOn": new Date().getTime()
-            }
-        });
-        $("#editModal").modal("hide");
+                 }
+   });
+             $("#editModal").modal("hide");
         }
         
     }
