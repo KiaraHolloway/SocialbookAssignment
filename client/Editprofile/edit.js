@@ -8,7 +8,7 @@ Template.editProf.events({
         let Num = $("#editNum").val();
         let info = $("#editinfo").val();
         let idea = $("#editidea").val();
-        let Hob = $("#editparish").val();
+        let parish = $("#editparish").val();
         let Sex = $("#editmale").prop("checked") ? "male" : "female";
 
         if (validateEditForm(pic,pic2,fName,lName,Num,info,idea,parish,Sex)) {
@@ -32,7 +32,7 @@ Template.editProf.events({
     }
 });
 
-let validateEditForm = (fn,ln,nm,info,idea,parish,Sx,pic1,pic2) => {
+let validateEditForm = (firstn,lastn,numm,info,idea,parish,Sex,pic1,pic2) => {
     let valid = true;
     $("#editpic").removeClass("errorBox");
     $("#editpic2").removeClass("errorBox");
@@ -44,15 +44,15 @@ let validateEditForm = (fn,ln,nm,info,idea,parish,Sx,pic1,pic2) => {
     $("#editparish").removeClass("errorBox");
     $("#editSex").removeClass("errorBox");
   
-    if (!fn) {
+    if (!firstn) {
       $("#editfName").addClass("errorBox");
       valid = false;
     }
-    if (!ln) {
+    if (!lastn) {
       $("#editlName").addClass("errorBox");
       valid = false;
     }
-    if (!nm) {
+    if (!numm) {
       $("#editNum").addClass("errorBox");
       valid = false;
     }
@@ -68,7 +68,7 @@ let validateEditForm = (fn,ln,nm,info,idea,parish,Sx,pic1,pic2) => {
         $("#editparish").addClass("errorBox");
         valid = false;
     }
-    if (!Sx) {
+    if (!Sex) {
       $("#editSex").addClass("errorBox");
       valid = false;
     }

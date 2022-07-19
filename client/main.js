@@ -75,7 +75,7 @@ Template.main.events({
   }
 });
 
-let validateAddForm = (fn,ln,nm,info,idea,parish,Sex,pic1,pic2) => {
+let validateAddForm = (first,last,num,info,idea,parish,Sex,pic1,pic2) => {
   let valid = true;
   $("#pic").removeClass("errorBox");
   $("#pic2").removeClass("errorBox");
@@ -87,15 +87,15 @@ let validateAddForm = (fn,ln,nm,info,idea,parish,Sex,pic1,pic2) => {
   $("#parish").removeClass("errorBox");
   $("#Sex").removeClass("errorBox");
 
-  if (!fn) {
+  if (!first) {
     $("#fName").addClass("errorBox");
     valid = false;
   }
-  if (!ln) {
+  if (!last) {
     $("#lName").addClass("errorBox");
     valid = false;
   }
-  if (!nm) {
+  if (!num) {
     $("#Num").addClass("errorBox");
     valid = false;
   }
